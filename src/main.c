@@ -44,7 +44,7 @@
 #include "frame_skip.h"
 #include "gnutil.h"
 #include "roms.h"
-
+#include "gles-gui.h"
 #ifdef USE_GUI
 #include "gui_interf.h"
 #endif
@@ -70,6 +70,9 @@ int main(int argc, char *argv[])
 {
     char *rom_name;
     int rc;
+
+    doGuiSetup();
+
 
 
 #ifdef __AMIGA__
@@ -100,8 +103,10 @@ int main(int argc, char *argv[])
 	exit(0);
     }
 
-	init_sdl();
 
+   
+	init_sdl();
+        
 	init_event();
 
 /* GP2X stuff */
