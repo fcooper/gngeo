@@ -89,6 +89,8 @@ if test "x$enable_embedded" = xtrue ; then
    AC_DEFINE([EMBEDDED_FS],[1],[Define for embedded directory structure])
 fi
 
+
+LIBS="$LIBS -lgles-scale";
 # CFLAGS="$CFLAGS -DDATA_DIRECTORY=\"${pkgdatadir}\""
 
 # Checks for libraries.
