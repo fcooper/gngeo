@@ -76,20 +76,20 @@ void drz80_write16(unsigned short data,unsigned short address) {
 
 void drz80_writeport16(Uint16 port, Uint8 value)
 {
-	printf("Write port %d=%d\n",port,value);
+	//printf("Write port %d=%d\n",port,value);
     z80_port_write(port, value);
 }
 
 Uint8 drz80_readport16(Uint16 port)
 {
-	printf("Read port %d\n",port);
+	//printf("Read port %d\n",port);
     return z80_port_read(port);
 }
 
 /* cpu interface implementation */
 void cpu_z80_switchbank(Uint8 bank, Uint16 PortNo)
 {
-	printf("Switch bank %x %x\n",bank,PortNo);
+	//printf("Switch bank %x %x\n",bank,PortNo);
     if (bank<=3)
 	z80_bank[bank]=PortNo;
 
